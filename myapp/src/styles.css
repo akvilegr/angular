@@ -2,3 +2,19 @@
   margin-top: 1rem;
 }
 
+.state-alivrer {
+  color: red;
+}
+
+.state-livree {
+  color: rgb(1, 194, 1);
+}
+
+.state-encours {
+  color:rgb(55, 55, 255);
+}
+
+.card-header {
+ font-style: italic;
+font-variant: small-caps;
+}

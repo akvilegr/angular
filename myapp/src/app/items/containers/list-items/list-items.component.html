@@ -1,10 +1,5 @@
-<div class="container">
-<div class="card" *ngFor="let item of collection">
-  <h5 class="card-header">{{item.state}}</h5>
-  <div class="card-body">
-    <h5 class="card-title">{{item.name}}</h5>
-    <p class="card-text">{{item.reference}}</p>
-    <a href="#" class="btn btn-primary">Click</a>
-  </div>
-</div>
+<div class="container" >
+  <ng-container *ngFor="let cmd of collection">
+    <app-item [item]="cmd"></app-item>
+  </ng-container>
 </div>
