@@ -8,7 +8,6 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule
   ],
-  declarations: [ListItemsComponent],
-  exports: [ListItemsComponent]
+  declarations: [ListItemsComponent]
 })
 export class ItemsModule { }

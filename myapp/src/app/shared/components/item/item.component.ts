@@ -11,9 +11,13 @@ export class ItemComponent implements OnInit {
 
   @Input() item: Item;
   state = State;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public changeState(etat: State): void {
+    this.item.state = etat;
+  }
 }

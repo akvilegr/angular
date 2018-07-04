@@ -7,7 +7,6 @@ import { PageNotFoundComponent } from '../page-not-found/container/page-not-foun
   imports: [
     CommonModule
   ],
-  declarations: [HomeComponent],
-  exports: [HomeComponent]
+  declarations: [HomeComponent]
 })
 export class HomeModule { }

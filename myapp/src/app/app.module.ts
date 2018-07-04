@@ -8,7 +8,8 @@ import { HomeModule } from './home/home.module';
 import { PageNotFoundModule } from './page-not-found/page-not-found.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ItemsModule } from './items/items.module';
-import { StateDirective } from './shared/directives/state.directive';
+import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -22,7 +23,9 @@ import { StateDirective } from './shared/directives/state.directive';
     HomeModule,
     PageNotFoundModule,
     NgbModule.forRoot(),
-    ItemsModule
+    ItemsModule,
+    AppRoutingModule,
+    RouterModule
 
   ],
   providers: [],

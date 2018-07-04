@@ -8,7 +8,7 @@ import { Item } from '../../../shared/interfaces/item';
   styleUrls: ['./list-items.component.css']
 })
 export class ListItemsComponent implements OnInit {
-  public collection: Item[]; //variable public pour l'utiliser dans html; copie par référence
+  public collection: Item[]; // variable public pour l'utiliser dans html; copie par référence
 
   constructor(private collectionService: CollectionService) { }
 
