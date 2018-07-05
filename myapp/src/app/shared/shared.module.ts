@@ -5,14 +5,17 @@ import { ItemComponent } from './components/item/item.component';
 import { StateDirective } from './directives/state.directive';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
-  declarations: [NavComponent, ItemComponent, StateDirective],
-  exports: [NavComponent, ItemComponent, StateDirective]
+  declarations: [NavComponent, ItemComponent, StateDirective, FormComponent],
+  exports: [NavComponent, ItemComponent, StateDirective, FormComponent]
 })
 export class SharedModule { }
