@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { State } from '../../enums/state.enum';
+import { Item } from '../../interfaces/item';
 
 @Component({
   selector: 'app-form',
@@ -11,6 +12,7 @@ export class FormComponent implements OnInit {
 
   public form: FormGroup;
   public libelles = Object.values(State);
+  @Output() newItem: EventEmitter<Item> = new EventEmitter<Item>();
 
   constructor(private fb: FormBuilder) { }
 
@@ -39,7 +41,7 @@ export class FormComponent implements OnInit {
   }
 
   public process() {
-    console.log(this.form.value);
+    this.newItem.emit(this.form.value);
   }
 
 

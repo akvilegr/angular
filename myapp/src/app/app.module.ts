@@ -12,6 +12,13 @@ import { LOCALE_ID, NgModule } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment.firebase';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from 'src/app/core/services/in-memory-data.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -29,8 +36,13 @@ registerLocaleData(localeFr, 'fr');
     AppRoutingModule,
     HomeModule,
     ItemsModule,
-    PageNotFoundModule
-
+    PageNotFoundModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    ),
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr' }

@@ -1,4 +1,4 @@
-.form-group
+
 .card {
   margin-top: 1rem;
 }
@@ -18,4 +18,9 @@
 .card-header {
  font-style: italic;
 font-variant: small-caps;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 5px;
 }
